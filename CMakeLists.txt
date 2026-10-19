@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(robotnik_unity)
+project(unity_sim)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -13,9 +13,22 @@ find_package(ament_cmake REQUIRED)
 
 install(DIRECTORY
   launch
-  utils
   rviz
   DESTINATION share/${PROJECT_NAME}
+  PATTERN "__pycache__" EXCLUDE
+)
+
+install(FILES
+  worlds/unity_simulation.tar.gz
+  worlds/unity_simulation_only.tar.gz
+  DESTINATION share/${PROJECT_NAME}/worlds
+)
+
+install(PROGRAMS
+  utils/load_usd_and_run.py
+  utils/activate_robots.py
+  utils/verify_unity_archives.py
+  DESTINATION share/${PROJECT_NAME}/utils
 )
 
 if(BUILD_TESTING)

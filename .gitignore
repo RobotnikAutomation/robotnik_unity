@@ -1,0 +1,40 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# IDE and local user files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Unity build outputs
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.x86_64
+*.dmg
+*.appimage
+
+# Crash reports and local metadata
+sysinfo.txt
+*.stackdump
+.DS_Store
+
+# Python generated files
+**/__pycache__/
+*.py[cod]
